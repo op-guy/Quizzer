@@ -20,6 +20,7 @@ from questions import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.all_questions_view),
-    path('question-list', views.question_list),
+    path('questions', views.allQuestionsView),
+    path('questions-by-topic', views.questionByTopic),
+    path('questions/<int:id>', views.updateQuestion),
 ]
